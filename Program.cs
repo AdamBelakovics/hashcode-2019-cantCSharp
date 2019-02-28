@@ -6,10 +6,13 @@ namespace hascode
     {
         static void Main(string[] args)
         {
-            //Parse
-            var result = Algorithm.run(/* input ,*/ new Greedy());
+			//Parse
+			var p = InputInterpreter.Interpret("a_example.txt");
+
+			var result = Algorithm.run(/* input ,*/ new Greedy());
             //Evaluate
             //PrintOutput
+			Console.ReadLine();
         }
     }
 }

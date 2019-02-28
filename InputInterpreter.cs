@@ -21,7 +21,7 @@ namespace hascode
 				var n = int.Parse(s.ReadLine());
 				for (int i = 0; i < n; i++)
 				{
-					var p = new Picture();
+					var p = new Picture() { Index = i };
 					var input = s.ReadLine().Split(' ');
 					if (input[0].Equals("V"))
 						p.Orientation = Orientation.Vertical;
