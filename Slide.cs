@@ -1,19 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace hascode
 {
 	interface ISlide
 	{
-		List<string> GetTags();
+		HashSet<string> GetTags();
+		string GetIds();
 	}
 
 	class HorizontalSlide : ISlide
 	{
 		public Picture Picture { get; set; }
 
-		public List<string> GetTags()
+		public string GetIds()
+		{
+			return Picture.Index.ToString();
+		}
+
+		public HashSet<string> GetTags()
 		{
 			return Picture.Tags;
 		}
@@ -21,13 +28,16 @@ namespace hascode
 
 	class VerticalSlide : ISlide
 	{
-		public List<string> GetTags()
+		public List<Picture> Pictures = new List<Picture>();
+		public HashSet<string> GetTags()
 		{
-			var tags = new List<string>();
-			Pictures.ForEach(p => tags.AddRange(p.Tags));
-			return tags;
+			return Pictures[0].Tags.Union(Pictures[1].Tags) as HashSet<string>;
 		}
 
-		public List<Picture> Pictures;
+		public string GetIds()
+		{
+			return $"{Pictures[0]} {Pictures[1]}";
+		}
+
 	}
 }
