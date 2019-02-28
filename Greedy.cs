@@ -43,19 +43,9 @@ namespace hascode
         public List<ISlide> createSlides(PictureStore store)
         {
             var ss = new List<ISlide>();
-<<<<<<< HEAD
             foreach(var pic in store.HorizontalPictures)
                 ss.Add( new HorizontalSlide() {Picture=pic});
             ss.AddRange(new VerticalCombiner().MatchVerticalPictures(store.VerticalPictures));
-=======
-            foreach (var pic in store.HorizontalPictures)
-            {
-                var s = new HorizontalSlide();
-                s.Picture = pic;
-                ss.Add(s);
-            }
-            //TODO Horizontal
->>>>>>> 16a89b76428918520514f795afe21f0545624bd6
             return ss;
         }
     }
