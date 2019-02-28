@@ -36,7 +36,7 @@ namespace hascode
 
 		public string GetIds()
 		{
-			return $"{Pictures[0]} {Pictures[1]}";
+			return $"{Pictures[0].Index.ToString()} {Pictures[1].Index.ToString()}";
 		}
 	}
 
