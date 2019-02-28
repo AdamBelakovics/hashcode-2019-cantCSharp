@@ -5,7 +5,7 @@ using System.Text;
 
 namespace hascode
 {
-	interface ISlide
+	public interface ISlide
 	{
 		HashSet<string> GetTags();
 		string GetIds();
@@ -38,6 +38,19 @@ namespace hascode
 		{
 			return $"{Pictures[0]} {Pictures[1]}";
 		}
+	}
 
+	public static class SlideExtensions
+	{
+		public static int GetScoreWith(this ISlide first, ISlide other)
+		{
+			var sum = 0;
+
+			var union = first.GetTags().Intersect(other.GetTags()).Count();
+			var except1 = first.GetTags().Except(other.GetTags()).Count();
+			var except2 = other.GetTags().Except(first.GetTags()).Count();
+			sum += Math.Min(union, Math.Min(except1, except2));
+			return sum;
+		}
 	}
 }
