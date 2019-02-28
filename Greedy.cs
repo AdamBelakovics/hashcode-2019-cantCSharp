@@ -7,7 +7,7 @@ namespace hascode
 {
     class Greedy : IStrategy
     {
-        public Slideshow execute()
+        public Slideshow execute(PictureStore pictureStore)
         {
             return new Slideshow();
         }

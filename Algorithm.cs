@@ -6,8 +6,8 @@ using hascode;
 namespace hascode
 {
 	class Algorithm {
-        public static Slideshow run(/* input, */ IStrategy strategy){
-            return strategy.execute(/* input */);
+        public static Slideshow run(PictureStore pictureStore, IStrategy strategy){
+            return strategy.execute(pictureStore);
         }
     }
 }

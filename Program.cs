@@ -9,7 +9,7 @@ namespace hascode
 			//Parse
 			var p = InputInterpreter.Interpret("Inputs/a_example.txt");
 
-			var result = Algorithm.run(/* input ,*/ new Greedy());
+			var result = Algorithm.run(p, new Greedy());
             //Evaluate
             //PrintOutput
 			Console.ReadLine();

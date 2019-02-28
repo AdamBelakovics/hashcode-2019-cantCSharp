@@ -6,6 +6,6 @@ using hascode;
 namespace hascode
 {
 	interface IStrategy {
-        Slideshow execute(/* input */);
+        Slideshow execute(PictureStore pictureStore);
     }
 }
