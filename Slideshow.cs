@@ -17,12 +17,7 @@ namespace hascode
 				var sum = 0;
 				for (var i = 0; i < Slides.Count - 1; i++)
 				{
-					var first = Slides[i].GetTags();
-					var second = Slides[i + 1].GetTags();
-					var union = first.Intersect(second).Count();
-					var except1 = first.Except(second).Count();
-					var except2 = second.Except(first).Count();
-					sum += Math.Min(union, Math.Min(except1, except2));
+					sum += Slides[i].GetScoreWith(Slides[i + 1]);
 				}
 				return sum;
 			}
