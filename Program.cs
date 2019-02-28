@@ -11,7 +11,9 @@ namespace hascode
 
 			var result = Algorithm.run(p, new Greedy());
             //Evaluate
+            Console.WriteLine(result.Score);
             //PrintOutput
+            result.prnintOutputTo("Outputs/a_example_output.txt");
 			Console.ReadLine();
         }
     }
