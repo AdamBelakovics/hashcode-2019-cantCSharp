@@ -8,7 +8,7 @@ namespace hascode
 {
 	class Slideshow
 	{
-		public List<ISlide> Slides { get; set; }
+    	public List<ISlide> Slides { get; set; }
 
 		public int Score
 		{
