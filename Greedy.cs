@@ -21,12 +21,9 @@ namespace hascode
 
         public List<ISlide> createSlides(PictureStore store){
             var ss = new List<ISlide>();
-            foreach(var pic in store.HorizontalPictures){
-                var s = new HorizontalSlide();
-                s.Picture = pic;
-                ss.Add(s);
-            }
-            //TODO Horizontal
+            foreach(var pic in store.HorizontalPictures)
+                ss.Add( new HorizontalSlide() {Picture=pic});
+            ss.AddRange(new VerticalCombiner().MatchVerticalPictures(store.VerticalPictures));
             return ss;
         }
     }

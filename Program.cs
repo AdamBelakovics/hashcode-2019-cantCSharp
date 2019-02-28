@@ -6,8 +6,13 @@ namespace hascode
     {
         static void Main(string[] args)
         {
-			//Parse
-			var p = InputInterpreter.Interpret("Inputs/a_example.txt");
+            Console.Write(args[0]);
+            PictureStore p;
+            if(args.Length != 0){
+                p = InputInterpreter.Interpret($"Inputs/{args[0]}");    
+            } else {
+			    p = InputInterpreter.Interpret("Inputs/a_example.txt");
+            }
 
 			var result = Algorithm.run(p, new Greedy());
             //Evaluate
