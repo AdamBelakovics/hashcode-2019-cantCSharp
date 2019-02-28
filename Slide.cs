@@ -31,7 +31,7 @@ namespace hascode
 		public List<Picture> Pictures = new List<Picture>();
 		public HashSet<string> GetTags()
 		{
-			return Pictures[0].Tags.Union(Pictures[1].Tags) as HashSet<string>;
+			return new HashSet<string>(Pictures[0].Tags.Union(Pictures[1].Tags));
 		}
 
 		public string GetIds()

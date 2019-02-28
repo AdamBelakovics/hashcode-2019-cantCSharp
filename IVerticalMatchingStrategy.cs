@@ -4,6 +4,6 @@ namespace hascode
 {
     interface IVerticalMatchingStrategy
     {
-        List<ISlide> matchVerticalPictures(List<Picture> verticalPictures);
+        List<ISlide> MatchVerticalPictures(List<Picture> verticalPictures);
     }
 }
