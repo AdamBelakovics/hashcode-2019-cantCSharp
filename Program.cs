@@ -6,7 +6,10 @@ namespace hascode
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Ádám vok cső");
+            //Parse
+            var result = Algorithm.run(/* input ,*/ new Greedy());
+            //Evaluate
+            //PrintOutput
         }
     }
 }
