@@ -28,7 +28,7 @@ namespace hascode
 					else
 						p.Orientation = Orientation.Horizontal;
 
-					for (int j = 0; j < int.Parse(input[1]) j++)
+					for (int j = 0; j < int.Parse(input[1]); j++)
 						p.Tags.Add(input[2 + j]);
 
 					switch (p.Orientation)
