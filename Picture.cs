@@ -12,6 +12,6 @@ namespace hascode
 	{
 		public int Index { get; set; }
 		public Orientation Orientation { get; set; }
-		public List<string> Tags { get; set; }
+		public HashSet<string> Tags { get; set; }
 	}
 }
